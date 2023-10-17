@@ -10,4 +10,4 @@ document.querySelector('.tecla_pom').onclik = tocaSomPom;
 const listaDeTlecas = document.querySelectorAll('.tecla');
 
 //chamando a função tocaSomPom pela item "0" da listaDeTeclas
-istaDeTlecas[0].onclick = TocaSomPom;
+istaDeTlecas[0].onclick = tocaSomPom;
