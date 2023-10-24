@@ -12,6 +12,8 @@ const listaDeTlecas = document.querySelectorAll('.tecla');
 //chamando a função tocaSomPom pela item "0" da listaDeTeclas
 listaDeTlecas[0].onclick = tocaSomPom;
 let contador = 0;
-while(){
-
+while(contador < 9){
+    listaDeTlecas[contador].onclick = tocaSomPom;
+    contador = contador + 1;
+    console.log(contador);
 }
