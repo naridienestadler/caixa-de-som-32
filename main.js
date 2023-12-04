@@ -1,29 +1,30 @@
-//delaração/criando função tocaSomPom
+//Declaração/criação função TocaSomPom 
 function tocaSom(idElementoAudio){
     document.querySelector(idElementoAudio).play();
 }
-//chamando/invocando a função tocaSomPom pelo clique do botão
-document.querySelector('.tecla_pom').onclik = tocaSom;
+//chamado/invocando a função tocaSomPom pelo clique do botão
+document.querySelector('.tecla_pom').onclick = tocaSom;
 
-//referência constante listaDeTeclas, buscando os botões
-const listaDeTelecas = document.querySelectorAll('.tecla');
+//referencia constante listaDeTeclas, buscando todos os botoes
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-//chamando a função tocaSomPom pela item "0" da listaDeTeclas
+//chamando a tecla tocaSomPom pelo item "0" da listadetecla
 listaDeTeclas[0].onclick = tocaSom;
 
-for(let contador = 0;contador<listaDeTeclas.length;contador++){
-    const tecla = listaDeTeclas [contaor];
+for(let contador = 0; contador < listaDeTeclas.length;contador++){
+    const tecla = listaDeTeclas[contador];
     const efeito = tecla.classList[1];
     const idAudio = `#som_${efeito}`;
     tecla.onclick = function(){
         tocaSom(idAudio);
     }
-    tecla.onkeydown = function(evento){
-        if(EventCounts.code !=== 'space' || evento.code === 'Enter'){
-           tecla.classList.add('ativa');
-        }
-    }
     tecla.onkeydown = function(){
-        tecla.classList.remove('ativa');
+        if(evento.code==='space'|| evento.code==='enter'){
+            tecla.classList.add('ativa') 
+        } 
+        tecla.onkeyup = function(){
+            tecla.classList.remove('ativa');
+        }    
     }
+    
 }
